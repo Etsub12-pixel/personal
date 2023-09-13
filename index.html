@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My personal website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/b98dcaa76c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                        <a href="#">About</a>
+                        <a href="#">Services</a>
+                        <a href="#">Perfolio</a>
+                        <a href="#">Contact</a>
+                    </li>
+    
+                </ul>
+                
+            </nav>
+            <div class="header-text">
+
+                <p>Computerscience Student</p>
+                <h1>Hi, I'm <span>Etsub Beza</span><br> from Ethiopia</h1>
+
+            </div>
+        </div>
+
+    </div>
+<!------------------About--------------------->
+    <div id="about">
+       <div class="container">
+        <div class="row">
+            <div class="about-col-1"> <img src="images/betek.jpg"></div>
+            <div class="about-col-2"><h1 class="subtitle">About me</h1><p> hey I am Etsub.I am from Ethiopia,Addis Abeba.I was born in May 13/2003. I have two brothers and two sisters they are my favorite people.I am a Computerscience student at DKU University near Gondar I am what you call "SENBET TEMARI" in church and still am. Computerscience wasn't my first choice but after a while I started enjoing it and now i can't thnk of anything else to do.  </p>
+                <div class="tab-titles">
+                 <p class="tab-links active-link" onclick="opentab('skills')" >Skills</p>
+                 <p class="tab-links" onclick="opentab('experience')"  > Experience </p>
+                 <p class="tab-links" onclick="opentab('education')" > Education</p>
+                </div>
+                <div class="tab-contents active-tab " id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Web app Development</li>
+                        <li><span>programing languages</span><br>c++,java,html....</li>
+                        <li><span>Editing</span><br>editing videos and photos</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience" >
+                    <ul>
+                        <li><span>2010-current</span><br>leadership at the church</li>
+                        <li><span>problem solver</span><br>I practice solving prblems any place any time which helps me a lot in any working situations</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education" >
+                    <ul>
+                        <li><span>2017</span><br>Degree at DKU University</li>
+                    </ul>
+                </div>
+            </div>
+         </div>
+       </div>
+    </div>
+
+    <!------------------Services------------------>
+<div id="services">
+    <div class="container">
+        <h1 class="subtitle">My Services</h1> 
+        <div class="service-list">
+           <div>
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>I provide an outstanding and clean work you and if that is what you are looking for then I am your guy.</p>
+            <a href="#">Learn more</a>
+           </div>
+           <div>
+            <i class="fa-solid fa-video"></i>
+            <h2>Video and photo Editing</h2>
+            <p>I provide an outstanding and clean work you and if that is what you are looking for then I am your guy.</p>
+            <a href="#">Learn more</a>
+           </div>
+           <div>
+            <i class="fa-solid fa-font-awesome"></i>
+            <h2>logo Design</h2>
+            <p>I provide an outstanding and clean work you and if that is what you are looking for then I am your guy.</p>
+            <a href="#">Learn more</a>
+           </div>
+        </div>
+      
+    </div>
+</div>
+  <!---------------- contact------------>
+
+  <div id="contacct">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="subtitle">Contact me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>etsub68@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>+251985071043</p>
+                <div class="socialicons">
+                    <a href="https://www.facebook.com/profile.php?id=100069995260629&mibextid=nW3QTL"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="https://Instagram.com/e_t_s_u_b/"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form >
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright made by <i class="fa-brands fa-hackerrank"></i> ETSUB </p>
+    </div>
+  </div>
+    
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+
+        function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+    </script>
+
+</body>
+</html>
